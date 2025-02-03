@@ -1,3 +1,22 @@
+Actual git merge on local laptop - Allready DONE
+=================================================
+create git repository iPhone_store
+cd iPhone_store
+create 3 files in main branch : android.txt, iPhone.txt, windows.txt
+update the file iPhone.tct to include 3 iPhone versions
+add, commit and push to main
+create new branch by running command ::
+git checkout -b feature_iphone
+update the file iPhone.txt with new version of iPhone
+git add, git commit
+checkout to main branch and update the file iPhone.txt - add new iPhone version - different one 
+git add, git commit
+merge the branch feature_iphone by runnin g command:
+git merge feature_iphone
+solve the conflict by using visual code
+To view the changes run command: 
+git log --oneline --graph --all
+
 Git Rebase
 ===========
 git commit
