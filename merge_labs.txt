@@ -19,6 +19,8 @@ git log --oneline --graph --all
 
 Git Rebase
 ===========
+To be done in site: http://git-school.github.io/visualizing-git
+
 git commit
 git commit
 git checkout HEAD~2
