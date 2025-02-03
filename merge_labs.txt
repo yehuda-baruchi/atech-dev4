@@ -1,4 +1,4 @@
-Actual git merge on local laptop - Allready DONE
+>Actual git merge on local laptop - Allready DONE
 =================================================
 create git repository iPhone_store
 cd iPhone_store
@@ -87,6 +87,9 @@ git push
 
 git rebase:
 ===========
+if you did not clone already the repository, clone it by using command:
+git clone https://github.com/yehuda-baruchi/atech-dev4.git
+
 vi rebasefile01.txt
 git add -A
 git commit -m "new rebasefile01"
