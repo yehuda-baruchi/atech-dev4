@@ -1,0 +1,80 @@
+Git Rebase
+===========
+git commit
+git commit
+git checkout HEAD~2
+git checkout -b feature
+git commit
+git commit
+git rebase master
+
+Open the cli of Git Bash and do the below commands
+=================================================
+git pull
+git branch
+git checkout bugfix01
+ls
+mkdir exercise-05
+cd exercise-05
+echo "test02" >> mergefile02.txt
+cd ..
+ls -ltra
+cat mergefile02.txt
+git add -A
+git commit -m "test02"
+git push
+git checkout main
+git fetch                                    # See the diff before merge
+git diff main origin/main
+git merge bugfix01
+ls
+git add -A
+git commit -m "test02 to main branch after merge"
+git pull
+git push
+
+
+Git conflict merge
+===================
+Go to the bugfix01 branch and add test03 in line 2
+Switch to main branch and add test04 in line 2
+run the merge command
+git merge bugfix01             
+# you should got the error below
+Error: Automatic Merge Fail ...
+
+lets fix the Confilct of merge
+using visual code edit the file mergefile02.txt
+and solve the conflict
+
+Run commands:
+=============
+git add -A
+git commit -m "fix conflict"
+git merge bugfix01
+cat mergefile02.txt
+git pull
+git push
+
+git rebase:
+===========
+vi rebasefile01.txt
+git add -A
+git commit -m "new rebasefile01"
+git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' rebasefile01.txt
+vi rebasefile01.txt
+git add -A
+git commit -m "new rebasefile01 with new line"
+ls
+git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' rebasefile01.txt
+git checkout main
+ls
+git rebase bugfix01                          # now we can see the new rebasefile01.txt
+ls
+gitk
+gitk --all
+git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' rebasefile01.txt
+git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all
+
+
+
