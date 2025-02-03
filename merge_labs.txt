@@ -88,7 +88,7 @@ git push
 git rebase:
 ===========
 if you did not clone already the repository, clone it by using command:
-git clone https://github.com/yehuda-baruchi/atech-dev4.git
+       git clone https://github.com/yehuda-baruchi/atech-dev4.git
 
 git checkout -b feature_rebase
 
@@ -102,9 +102,10 @@ git commit -m "new rebasefile01 with new line"
 ls
 git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' rebasefile01.txt
 git checkout main
-ls
-git rebase bugfix01                          # now we can see the new rebasefile01.txt
-ls
+ls rebasefile01.txt                          # Not exist
+git rebase feature_rebase                      # now we can see the new rebasefile01.txt
+ls rebasefile01.txt
+
 gitk
 gitk --all
 git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' rebasefile01.txt
