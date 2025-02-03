@@ -90,6 +90,8 @@ git rebase:
 if you did not clone already the repository, clone it by using command:
 git clone https://github.com/yehuda-baruchi/atech-dev4.git
 
+git checkout -b feature_rebase
+
 vi rebasefile01.txt
 git add -A
 git commit -m "new rebasefile01"
